@@ -9,24 +9,33 @@ layout: default
   <article class="media mb-3">
     <div class="media-left">
       <p class="image is-64x64">
-        <img class="is-rounded" src="{{ site.github.url }}/assets/img/av.png">
+        <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
       </p>
     </div>
     <div class="media-content">
       <div class="content">
         <p class="pb-1">
-          <strong>Nikita Rusetskii</strong> <small>@xtenzQ</small> 
+          <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small>
+          {% if site.media.twitter %}
           <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="https://twitter.com/xtenzQ"><i class="fab fa-twitter"></i></a>
+            <a class="has-text-grey-light" target="_blank" href="{{ site.media.twitter }}"><i
+                class="fab fa-twitter"></i></a>
           </span>
+          {% endif %}
+          {% if site.media.linkedin %}
           <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="https://www.linkedin.com/in/xtenzq/"><i class="fab fa-linkedin"></i></a>
+            <a class="has-text-grey-light" target="_blank" href="{{ site.media.linkedin }}"><i
+                class="fab fa-linkedin"></i></a>
           </span>
+          {% endif %}
+          {% if site.media.facebook %}
           <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="https://www.facebook.com/xtenzQ/"><i class="fab fa-facebook-square"></i></a>
+            <a class="has-text-grey-light" target="_blank" href="{{ site.media.facebook }}"><i
+                class="fab fa-facebook-square"></i></a>
           </span>
+          {% endif %}
           <br>
-          Java software developer and PhD student at <a href="http://www.istu.edu/eng/">@INRTU</a>
+          {{ site.media.description }}
           <br>
           <span class="has-text-grey-light">
             {% if post.layout != post %}
@@ -40,13 +49,13 @@ layout: default
             {% endif %}
             {% endif %}
 
-            {% assign d = page.date | date: "%-d"  %}
             {{ page.date | date: "%B" }}
+            {% assign d = page.date | date: "%-d"  %}
             {% case d %}
-            {% when '1' or '21' or '31' %}{{ d }}st
-            {% when '2' or '22' %}{{ d }}nd
-            {% when '3' or '23' %}{{ d }}rd
-            {% else %}{{ d }}th{% endcase %},
+            {% when '1' or '21' or '31' %}{{ d }}st,
+            {% when '2' or '22' %}{{ d }}nd,
+            {% when '3' or '23' %}{{ d }}rd,
+            {% else %}{{ d }}th{% endcase %}
             {{ page.date | date: "%Y" }}
             &bull;
             {% if post.layout == post %}
@@ -73,9 +82,9 @@ layout: default
   {{ content }}
 
   {% if page.tags %}
-  <div class="tags pt-4">
+  <div class="buttons mb-2">
     {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}"><span class="tag is-size-7 px-2 py-3 mx-1">{{ tag }}</span></a>
+    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'" class="button is-small is-light">{{ tag }}</button>
     {% endfor %}
   </div>
   {% endif %}

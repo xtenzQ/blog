@@ -1,6 +1,15 @@
 title: 'Nikita Rusetskii blog'
+username: 'xtenzQ'
 description: 'Nikita Rusetskii blog'
 author: 'Nikita Rusetskii'
+logo: 'rusetskii.dev'
+
+media:
+  avatar: 'assets/img/av.png'
+  description: 'Software developer and PhD student at <a href="http://www.istu.edu/eng/">@INRTU</a>'
+  twitter: 'https://twitter.com/xtenzQ'
+  linkedin: 'https://www.linkedin.com/in/xtenzq/'
+  facebook: 'https://www.facebook.com/xtenzQ/'
 
 pagination:
   enabled: true
