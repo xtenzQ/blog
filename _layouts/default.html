@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+  {% include nav.html %}
+  <section id="home" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500" class="section" style="margin-top: 3rem;">
+    <div class="container">
+      <div class="content">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include footer.html %}
+</body>
+
+</html>

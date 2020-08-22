@@ -1,0 +1,42 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#00d1b2" />
+    {% assign title = page.title | default: site.title | escape %}
+    {% assign canonical = page.url | replace:'index.html','' | absolute_url %}
+    {% assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
+    <meta name="author" content="Nikita Rusetskii">
+    <meta name="description" content="{{ description }}">
+    <!-- Meta sharing -->
+    <meta property="og:title" content="Nikita RUSETSKII - Software Engineer">
+    <meta property="og:description" content="Just a guy with passion for coding">
+    <meta property="og:image" content="img/preview.png">
+    <meta property="og:url" content="http://xtenzq.github.io/">
+    {% if page.keywords %}
+        {% if page.keywords.first %}
+        {% assign keywords = page.keywords | join: ',' %}
+        {% else %}
+        {% assign keywords = page.keywords %}
+        {% endif %}
+        <meta name="keywords" content="{{ keywords }}">
+    {% endif %}
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://rusetskii.dev/img/favicon.ico" type="image/png" />
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <!-- MathJax Plugin -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- Main CSS style -->
+    <link rel="stylesheet" type="text/css" href="{{ "/css/styles.css" | relative_url }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- FontAwesome script -->
+    <script src="https://kit.fontawesome.com/82aef158e1.js"></script>
+    
+    <title>{{ title }}</title>
+</head>

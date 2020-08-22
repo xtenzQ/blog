@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="container">
+  <h1 class="title">
+    {{ page.title }}
+  </h1>
+  <article class="media mb-3">
+    <div class="media-left">
+      <p class="image is-64x64">
+        <img class="is-rounded" src="{{ site.github.url }}/assets/img/av.png">
+      </p>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p class="pb-1">
+          <strong>Nikita Rusetskii</strong> <small>@xtenzQ</small> 
+          <span class="icon">
+            <a class="has-text-grey-light" target="_blank" href="https://twitter.com/xtenzQ"><i class="fab fa-twitter"></i></a>
+          </span>
+          <span class="icon">
+            <a class="has-text-grey-light" target="_blank" href="https://www.linkedin.com/in/xtenzq/"><i class="fab fa-linkedin"></i></a>
+          </span>
+          <span class="icon">
+            <a class="has-text-grey-light" target="_blank" href="https://www.facebook.com/xtenzQ/"><i class="fab fa-facebook-square"></i></a>
+          </span>
+          <br>
+          Java software developer and PhD student at <a href="http://www.istu.edu/eng/">@INRTU</a>
+          <br>
+          <span class="has-text-grey-light">
+            {% if post.layout != post %}
+            {% assign words = post.content | strip_html | number_of_words %}
+            {% if words < 180 %}
+            &lt;1 minute read
+            {% elsif words < 360 %}
+            1 min read
+            {% else %}
+            {{ words | divided_by:180 }} min read
+            {% endif %}
+            {% endif %}
+
+            {% assign d = page.date | date: "%-d"  %}
+            {{ page.date | date: "%B" }}
+            {% case d %}
+            {% when '1' or '21' or '31' %}{{ d }}st
+            {% when '2' or '22' %}{{ d }}nd
+            {% when '3' or '23' %}{{ d }}rd
+            {% else %}{{ d }}th{% endcase %},
+            {{ page.date | date: "%Y" }}
+            &bull;
+            {% if post.layout == post %}
+            {% assign words = content | number_of_words %}
+            {% if words < 180 %}
+            &lt;less than 1 min read
+            {% elsif words < 360 %}
+            1 min read
+            {% else %}
+            {{ words | divided_by:180 }} min read
+            {% endif %}
+            {% endif %}
+          </span>
+
+        </p>
+      </div>
+    </div>
+  </article>
+
+  {% if page.image %}
+  <img class="mb-4" src="{{ site.github.url }}/assets/img/{{ page.image }}">
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.tags %}
+  <div class="tags pt-4">
+    {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}"><span class="tag is-size-7 px-2 py-3 mx-1">{{ tag }}</span></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>

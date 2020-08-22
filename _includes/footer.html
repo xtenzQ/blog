@@ -1,0 +1,35 @@
+<footer class="footer has-text-centered">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+                <p>
+                    &copy; Nikita Rusetskii
+                </p>
+                <p>
+                    <small>
+                        You can overcome anything if you set your mind to it
+                    </small>
+                </p>
+                <p style="margin-top: 1rem;">
+                    <a href="http://bulma.io">
+                        <img src="{{ site.github.url }}/assets/img/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    AOS.init();
+
+    (function () {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#' + burger.dataset.target);
+
+        burger.addEventListener('click', function () {
+            burger.classList.toggle('is-active');
+            nav.classList.toggle('is-active');
+        });
+    })();
+
+</script>

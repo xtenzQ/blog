@@ -1,0 +1,29 @@
+title: 'Nikita Rusetskii blog'
+description: 'Nikita Rusetskii blog'
+author: 'Nikita Rusetskii'
+
+pagination:
+  enabled: true
+  debug: false
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+plugins:             [jekyll-paginate-v2]
+
+markdown:            kramdown
+highlighter:         rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+tag_page: '/tags.html'
+category_page: '/categories.html'
