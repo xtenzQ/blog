@@ -6,7 +6,7 @@ layout: default
   <h1 class="title">
     {{ page.title }}
   </h1>
-  <article id="author" class="media mb-3">
+  <article id="author" class="media mb-5">
     <div class="media-left">
       <p class="image is-64x64">
         <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
@@ -81,10 +81,17 @@ layout: default
 
   {{ content }}
 
+  <!-- Left side -->
   {% if page.tags %}
-  <div class="buttons mb-2">
+  <div class="buttons pt-2">
     {% for tag in page.tags %}
-    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'" class="button is-small is-light">{{ tag }}</button>
+    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'"
+      class="button is-small is-light">
+      <span class="icon is-small">
+        <i class="fas fa-tag"></i>
+      </span>
+      <span>{{ tag }}</span>
+    </button>
     {% endfor %}
   </div>
   {% endif %}

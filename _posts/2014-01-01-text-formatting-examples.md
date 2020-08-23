@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Text Formatting Examples"
+subtitle: "Wow, that's cool!"
 date: 2016-11-20 19:16:49 +0100
 author: "Nikita Rusetskii"
 category: Dev

@@ -8,6 +8,16 @@ html {
   }
 }
 
+::-webkit-scrollbar {
+  width: 9px; }
+
+::-webkit-scrollbar-thumb {
+  background: #00d1b2; }
+
+::-webkit-scrollbar-track {
+  background: #fff; }
+
+
 .footer {
   background-color: #00d1b2 !important;
   color: white !important;
