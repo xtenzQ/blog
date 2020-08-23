@@ -9,14 +9,22 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 9px; }
+  width: 9px;
+}
 
 ::-webkit-scrollbar-thumb {
-  background: #00d1b2; }
+  background: #00d1b2;
+}
 
 ::-webkit-scrollbar-track {
-  background: #fff; }
+  background: #fff;
+}
 
+.content figure {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: left !important;
+}
 
 .footer {
   background-color: #00d1b2 !important;
