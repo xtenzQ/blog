@@ -6,13 +6,13 @@ layout: default
   <h1 class="title">
     {{ page.title }}
   </h1>
-  <article class="media mb-3">
+  <article id="author" class="media mb-3">
     <div class="media-left">
       <p class="image is-64x64">
         <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
       </p>
     </div>
-    <div class="media-content">
+    <div class="media-content" style="font-size: .9rem!important;">
       <div class="content">
         <p class="pb-1">
           <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small>
@@ -35,9 +35,9 @@ layout: default
           </span>
           {% endif %}
           <br>
-          {{ site.media.description }}
+          <span>{{ site.media.description }}</span>
           <br>
-          <span class="has-text-grey-light">
+          <span class="has-text-grey-light has-text-weight-light">
             {% if post.layout != post %}
             {% assign words = post.content | strip_html | number_of_words %}
             {% if words < 180 %}

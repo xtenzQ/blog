@@ -10,9 +10,10 @@ layout: default
 
   {% if post.tags %}
   <div class="buttons mb-2">
-      {% for tag in post.tags %}
-      <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'" class="button is-small is-light">{{ tag }}</button>
-      {% endfor %}
+    {% for tag in post.tags %}
+    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'"
+      class="button is-small is-light">{{ tag }}</button>
+    {% endfor %}
   </div>
   {% endif %}
   {% if post.image %}
@@ -24,30 +25,25 @@ layout: default
     {{ post.content | strip_html | truncate: 350 }}
   </p>
 
-  <!-- Main container -->
-  <nav class="level">
-    <!-- Left side -->
-    <div class="level-left">
-      <a class="level-item" href="{{ site.github.url }}{{ post.url }}">
-        <button class="button is-small is-primary">
-          <span class="icon is-small">
-            <i class="fas fa-book"></i>
-          </span>
-          <span>Read more</span>
-        </button>
-      </a>
+  <!-- Left side -->
+  <div class="buttons">
+    <button onclick="window.location.href='{{ site.github.url }}{{ post.url }}'" class="button is-small is-primary">
+      <span class="icon is-small">
+        <i class="fas fa-book"></i>
+      </span>
+      <span>Read more</span>
+    </button>
 
-      <button class="button is-small level-item is-white">
-        <span class="icon is-small"><i class="fa fa-calendar"></i></span>
-        <span> {{ post.date | date_to_string }} </span>
-      </button>
+    <button class="button is-small level-item is-white">
+      <span class="icon is-small"><i class="fa fa-calendar"></i></span>
+      <span> {{ post.date | date_to_string }} </span>
+    </button>
 
-      <button class="button is-small level-item is-white">
-        <span class="icon is-small"><i class="fas fa-clock" aria-hidden="true"></i></span>
-        <span> {% include read-time.html %} </span>
-      </button>
-    </div>
-  </nav>
+    <button class="button is-small level-item is-white">
+      <span class="icon is-small"><i class="fas fa-clock" aria-hidden="true"></i></span>
+      <span> {% include read-time.html %} </span>
+    </button>
+  </div>
 
   <div class="container">
 
