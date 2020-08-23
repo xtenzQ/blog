@@ -85,9 +85,9 @@ Another option is to embed your code through [Gist](https://en.support.wordpress
 
 ## Images
 
-To add an image, use `![alt text](<Image url> "Image meta title")`:
+To add an image, use `% include pic.html url=<img_url> description="Example" %`:
 
-![alt text](https://camo.githubusercontent.com/44872a00f35ccbc0392cc57eb6d2edabdc0f7c48/68747470733a2f2f692e696d6775722e636f6d2f55624a387272472e6a7067 "Example")
+{% include pic.html url="https://camo.githubusercontent.com/44872a00f35ccbc0392cc57eb6d2edabdc0f7c48/68747470733a2f2f692e696d6775722e636f6d2f55624a387272472e6a7067" description="Example" %}
 
 ## Unordered and Numbered Lists
 
