@@ -11,13 +11,12 @@ layout: default
   {% if post.tags %}
   <div class="buttons mb-2">
     {% for tag in post.tags %}
-    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'"
-      class="button is-small is-light">
+    <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="button has-text-grey is-small is-light">
       <span class="icon is-small">
         <i class="fas fa-tag"></i>
       </span>
-      <span>{{ tag }}</span>     
-    </button>
+      <span>{{ tag }}</span>
+    </a>
     {% endfor %}
   </div>
   {% endif %}
@@ -32,12 +31,12 @@ layout: default
 
   <!-- Left side -->
   <div class="buttons">
-    <button onclick="window.location.href='{{ site.github.url }}{{ post.url }}'" class="button is-small is-primary">
+    <a href="{{ site.github.url }}{{ post.url }}" class="button is-small is-primary">
       <span class="icon is-small">
         <i class="fas fa-book"></i>
       </span>
       <span>Read more</span>
-    </button>
+    </a>
 
     <button class="button is-small level-item is-white">
       <span class="icon is-small"><i class="fa fa-calendar"></i></span>

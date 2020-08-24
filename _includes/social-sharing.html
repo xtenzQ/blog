@@ -1,22 +1,23 @@
-<p class="buttons">
-  <button
-    onclick="window.location.href='https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}'"
-    class="button is-primary is-inverted">
-    <span class="icon is-small">
-      <i class="fab fa-2x fa-twitter-square"></i>
-    </span>
-  </button>
-  <button
-    onclick="window.location.href='https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}'"
-    class="button is-primary is-inverted">
-    <span class="icon is-small">
-      <i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>
-    </span>
-  </button>
-  <button onclick="window.location.href='https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}'"
-    class="button is-primary is-inverted">
-    <span class="icon is-small">
-      <i class="fab fa-google-plus-square fa-2x" aria-hidden="true"></i>
-    </span>
-  </button>
+<p class="buttons is-vertical">
+<p class="button is-white mb-1">Share on:</p>
+<a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
+  class="button is-white is-small">
+  <span class="icon">
+    <i class="fab fa-twitter"></i>
+  </span>
+  <span>Twitter</span>
+</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
+  class="button is-white is-small">
+  <span class="icon">
+    <i class="fab fa-facebook" aria-hidden="true"></i>
+  </span>
+  <span>Facebook</span>
+</a>
+<a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" class="button is-white is-small">
+  <span class="icon">
+    <i class="fab fa-google-plus" aria-hidden="true"></i>
+  </span>
+  <span>Google+</span>
+</a>
 </p>
