@@ -79,20 +79,49 @@ layout: default
 
   {{ content }}
 
-  <!-- Left side -->
-  {% if page.tags %}
-  <div class="buttons pt-2">
-    {% for tag in page.tags %}
-    <button onclick="window.location.href='{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}'"
-      class="button has-text-grey is-small is-light">
-      <span class="icon is-small">
-        <i class="fas fa-tag"></i>
-      </span>
-      <span>{{ tag }}</span>
-    </button>
-    {% endfor %}
-  </div>
-  {% endif %}
-  
 
+  <div class="">
+    <!-- Left side -->
+    <div class="level-left">
+      <!-- Left side -->
+      {% if page.tags %}
+      <div class="buttons pt-2">
+        <p class="button is-white mb-1">Tags:</p>
+        {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}"
+          class="button has-text-grey is-small is-light">
+          <span class="icon is-small">
+            <i class="fas fa-tag"></i>
+          </span>
+          <span>{{ tag }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Right side -->
+    <div class="level-right">
+      <p class="buttons">
+      <p class="button is-white mb-1">Share on:</p>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
+        class="button is-white">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
+        class="button is-white">
+        <span class="icon">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        </span>
+      </a>
+      <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" class="button is-white">
+        <span class="icon">
+          <i class="fab fa-google-plus" aria-hidden="true"></i>
+        </span>
+      </a>
+      </p>
+    </div>
+  </div>
 </div>

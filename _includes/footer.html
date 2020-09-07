@@ -32,3 +32,19 @@
     })();
 
 </script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.my-gallery').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            cssEase: 'linear'
+        });
+    });
+</script>

@@ -15,20 +15,21 @@
     <meta property="og:image" content="img/preview.png">
     <meta property="og:url" content="http://xtenzq.github.io/">
     {% if page.keywords %}
-        {% if page.keywords.first %}
-        {% assign keywords = page.keywords | join: ',' %}
-        {% else %}
-        {% assign keywords = page.keywords %}
-        {% endif %}
-        <meta name="keywords" content="{{ keywords }}">
+    {% if page.keywords.first %}
+    {% assign keywords = page.keywords | join: ',' %}
+    {% else %}
+    {% assign keywords = page.keywords %}
     {% endif %}
-    
+    <meta name="keywords" content="{{ keywords }}">
+    {% endif %}
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://rusetskii.dev/img/favicon.ico" type="image/png" />
     <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <!-- MathJax Plugin -->
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <!-- Main CSS style -->
     <link rel="stylesheet" type="text/css" href="{{ "/css/styles.css" | relative_url }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
@@ -37,6 +38,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- FontAwesome script -->
     <script src="https://kit.fontawesome.com/82aef158e1.js"></script>
-    
+
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css" />
+
     <title>{{ site.author }} - {{ title }}</title>
 </head>

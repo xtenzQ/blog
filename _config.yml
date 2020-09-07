@@ -4,6 +4,8 @@ description: 'Nikita Rusetskii blog'
 author: 'Nikita Rusetskii'
 logo: 'rusetskii.dev/blog'
 
+future: true
+
 media:
   avatar: 'assets/img/av.png'
   description: 'Software developer and PhD student at <a href="http://www.istu.edu/eng/">@INRTU</a>'
