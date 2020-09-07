@@ -1,44 +1,37 @@
 ---
 layout: default
 ---
-<p class="is-uppercase has-text-centered mb-4">My blog about development, traveling and education</p>
-<article id="author" class="media mb-5" style="width: 70%; margin: auto;">
-  <div class="media-left">
-    <p class="image is-48x48">
-      <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
-    </p>
+<div class="has-text-centered has-text-weight-light">
+  <div style="margin: 0 auto;" class="image is-128x128 mb-2">
+    <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
   </div>
-  <div class="media-content is-vcentered" style="font-size: .9rem!important;">
-    <div class="content">
-      <p class="pb-1">
-        <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small>
-        {% if site.media.twitter %}
-        <span class="icon">
-          <a class="has-text-grey-light" target="_blank" href="{{ site.media.twitter }}"><i
-              class="fab fa-twitter"></i></a>
-        </span>
-        {% endif %}
-        {% if site.media.linkedin %}
-        <span class="icon">
-          <a class="has-text-grey-light" target="_blank" href="{{ site.media.linkedin }}"><i
-              class="fab fa-linkedin"></i></a>
-        </span>
-        {% endif %}
-        {% if site.media.facebook %}
-        <span class="icon">
-          <a class="has-text-grey-light" target="_blank" href="{{ site.media.facebook }}"><i
-              class="fab fa-facebook-square"></i></a>
-        </span>
-        {% endif %}
-        <br>
-        <span class="has-text-weight-light">
-          PhD student at @INRTU, software engineer and longlife learner
-        </span>
+  <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small><br>
+  <span>
+    PhD student at @INRTU, software engineer and longlife learner
+  </span>
+  <p class="pb-1">
+    {% if site.media.twitter %}
+    <span class="icon">
+      <a class="has-text-grey-light" target="_blank" href="{{ site.media.twitter }}"><i class="fab fa-twitter"></i></a>
+    </span>
+    {% endif %}
+    {% if site.media.linkedin %}
+    <span class="icon">
+      <a class="has-text-grey-light" target="_blank" href="{{ site.media.linkedin }}"><i
+          class="fab fa-linkedin"></i></a>
+    </span>
+    {% endif %}
+    {% if site.media.facebook %}
+    <span class="icon">
+      <a class="has-text-grey-light" target="_blank" href="{{ site.media.facebook }}"><i
+          class="fab fa-facebook-square"></i></a>
+    </span>
+    {% endif %}
+    <br>
+    <p class="has-text-centered mb-4" style="font-size: 1.2rem !important;">I talk about 💻 development, 🌏 traveling and 🎓 education</p>
 
-      </p>
-    </div>
-  </div>
-</article>
+  </p>
+</div>
 <hr>
 {% for post in site.posts %}
 <div class="container mb-4">
