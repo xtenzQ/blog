@@ -1,5 +1,8 @@
 <div class="my-gallery">
-    {% for url in include.urls %}
-    <div class="image"><img src="{{ url }}"></div>
+    {% for i in (0..include.photosize) %}
+    <div class="image has-text-centered">
+        <img class="myImages mb-1" id="myImg" alt="{{ include.descriptions[i] }}" src="{{ include.urls[i] }}">
+        <span class="has-text-weight-light"><i>{{ include.descriptions[i] }}</i></span>
+    </div>
     {% endfor %}
 </div>

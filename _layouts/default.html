@@ -3,8 +3,14 @@
 {% include head.html %}
 
 <body>
+  <div id="myModal" class="modal" style="z-index: 1000;">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
   {% include nav.html %}
-  <section id="home" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500" class="section" style="margin-top: 3rem;">
+  <section id="home" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="500" class="section"
+    style="margin-top: 3rem;">
     <div class="container">
       <div class="content">
         <div class="columns is-centered">
