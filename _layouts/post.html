@@ -59,7 +59,7 @@ layout: default
             {% if post.layout == post %}
             {% assign words = content | number_of_words %}
             {% if words < 180 %}
-            &lt;less than 1 min read
+            less than 1 min read
             {% elsif words < 360 %}
             1 min read
             {% else %}
@@ -74,12 +74,15 @@ layout: default
   </article>
 
   {% if page.image %}
-  <img class="mb-4" src="{{ site.github.url }}/assets/img/{{ page.image }}">
+  <figure class="image mb-2">
+    <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ side.image_caption }}">
+    <figcaption class="has-text-weight-light has-text-centered">{{ page.imagecaption }}</figcaption>
+  </figure>
   {% endif %}
 
   {{ content }}
 
-  <div class="">
+  <div>
     <!-- Left side -->
     <div class="level-left">
       <!-- Left side -->
