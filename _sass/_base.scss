@@ -196,10 +196,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+.mobile-sharing {
+  display: inline-block !important;
+}
+
 @media (min-width: 768px) {
   #home {
     margin-left: -71px;
     margin-top: 3rem;
+  }
+
+  .mobile-sharing {
+    display: none !important;
   }
 
   .icon-bar {

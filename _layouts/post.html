@@ -4,14 +4,15 @@ layout: default
 <div class="column is-narrow">
   <div class="icon-bar sticky">
     <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
-      class="button is-gray">
+      class="button is-primary is-outlined">
       <i class="fab fa-twitter"></i>
     </a>
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
-      class="button is-gray">
+      class="button is-primary is-outlined">
       <i class="fab fa-facebook" aria-hidden="true"></i>
     </a>
-    <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" class="button is-gray">
+    <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}"
+      class="button is-primary is-outlined">
       <i class="fab fa-google-plus" aria-hidden="true"></i>
     </a>
   </div>
@@ -112,5 +113,29 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
+  </div>
+  <div class="mobile-sharing">
+    <p class="pr-2 pt-2 mb-1">Share on:</p>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
+      class="button is-primary is-outlined is-small">
+      <span class="icon is-small">
+        <i class="fab fa-twitter"></i>
+      </span>
+      <span>Twitter</span>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
+      class="button is-primary is-outlined is-small">
+      <span class="icon is-small">
+        <i class="fab fa-facebook" aria-hidden="true"></i>
+      </span>
+      <span>Facebook</span>
+    </a>
+    <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}"
+      class="button is-primary is-outlined is-small">
+      <span class="icon is-small">
+        <i class="fab fa-google-plus" aria-hidden="true"></i>
+      </span>
+      <span>Google+</span>
+    </a>
   </div>
 </div>
