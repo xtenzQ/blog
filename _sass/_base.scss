@@ -114,10 +114,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes zoom {
   from {
-    transform: scale(0)
+    transform: scale(0);
   }
   to {
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
@@ -160,8 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   vertical-align: middle;
@@ -195,4 +194,31 @@ h1, h2, h3, h4, h5, h6 {
   #button {
     margin: 30px;
   }
+}
+
+@media (min-width: 768px) {
+  #home {
+    margin-left: -71px;
+    margin-top: 3rem;
+  }
+
+  .icon-bar {
+    display: block !important;
+    width: 47px !important;
+  }
+}
+
+.icon-bar {
+  display: none;
+}
+
+.icon-bar a {
+  width: 20px;
+  height: 30px;
+  margin: 5px auto;
+}
+
+.sticky {
+  position: sticky;
+  top: 80px;
 }

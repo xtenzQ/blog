@@ -1,129 +1,116 @@
 ---
 layout: default
 ---
-
-<div class="container">
-  <h1 class="title">
-    {{ page.title }}
-  </h1>
-  <article id="author" class="media mb-5">
-    <div class="media-left">
-      <p class="image is-48x48">
-        <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
-      </p>
-    </div>
-    <div class="media-content is-vcentered" style="font-size: .9rem!important;">
-      <div class="content">
-        <p class="pb-1">
-          <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small>
-          {% if site.media.twitter %}
-          <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="{{ site.media.twitter }}"><i
-                class="fab fa-twitter"></i></a>
-          </span>
-          {% endif %}
-          {% if site.media.linkedin %}
-          <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="{{ site.media.linkedin }}"><i
-                class="fab fa-linkedin"></i></a>
-          </span>
-          {% endif %}
-          {% if site.media.facebook %}
-          <span class="icon">
-            <a class="has-text-grey-light" target="_blank" href="{{ site.media.facebook }}"><i
-                class="fab fa-facebook-square"></i></a>
-          </span>
-          {% endif %}
-          <br>
-          <span class="has-text-grey-light has-text-weight-light">
-            {% if post.layout != post %}
-            {% assign words = post.content | strip_html | number_of_words %}
-            {% if words < 180 %}
-            &lt;1 minute read
-            {% elsif words < 360 %}
-            1 min read
-            {% else %}
-            {{ words | divided_by:180 }} min read
-            {% endif %}
-            {% endif %}
-
-            {{ page.date | date: "%B" }}
-            {% assign d = page.date | date: "%-d"  %}
-            {% case d %}
-            {% when '1' or '21' or '31' %}{{ d }}st,
-            {% when '2' or '22' %}{{ d }}nd,
-            {% when '3' or '23' %}{{ d }}rd,
-            {% else %}{{ d }}th{% endcase %}
-            {{ page.date | date: "%Y" }}
-            &bull;
-            {% if post.layout == post %}
-            {% assign words = content | number_of_words %}
-            {% if words < 180 %}
-            less than 1 min read
-            {% elsif words < 360 %}
-            1 min read
-            {% else %}
-            {{ words | divided_by:180 }} min read
-            {% endif %}
-            {% endif %}
-          </span>
-
+<div class="column is-narrow">
+  <div class="icon-bar sticky">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
+      class="button is-gray">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
+      class="button is-gray">
+      <i class="fab fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" class="button is-gray">
+      <i class="fab fa-google-plus" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>
+<div class="column is-half">
+  <div class="container">
+    <h1 class="title">
+      {{ page.title }}
+    </h1>
+    <article id="author" class="media mb-5">
+      <div class="media-left">
+        <p class="image is-48x48">
+          <img class="is-rounded" src="{{ site.github.url }}/{{ site.media.avatar }}">
         </p>
       </div>
-    </div>
-  </article>
+      <div class="media-content is-vcentered" style="font-size: .9rem!important;">
+        <div class="content">
+          <p class="pb-1">
+            <strong>{{ site.author }}</strong> <small>@{{ site.username }}</small>
+            {% if site.media.twitter %}
+            <span class="icon">
+              <a class="has-text-grey-light" target="_blank" href="{{ site.media.twitter }}"><i
+                  class="fab fa-twitter"></i></a>
+            </span>
+            {% endif %}
+            {% if site.media.linkedin %}
+            <span class="icon">
+              <a class="has-text-grey-light" target="_blank" href="{{ site.media.linkedin }}"><i
+                  class="fab fa-linkedin"></i></a>
+            </span>
+            {% endif %}
+            {% if site.media.facebook %}
+            <span class="icon">
+              <a class="has-text-grey-light" target="_blank" href="{{ site.media.facebook }}"><i
+                  class="fab fa-facebook-square"></i></a>
+            </span>
+            {% endif %}
+            <br>
+            <span class="has-text-grey-light has-text-weight-light">
+              {% if post.layout != post %}
+              {% assign words = post.content | strip_html | number_of_words %}
+              {% if words < 180 %}
+              &lt;1 minute read
+              {% elsif words < 360 %}
+              1 min read
+              {% else %}
+              {{ words | divided_by:180 }} min read
+              {% endif %}
+              {% endif %}
 
-  {% if page.image %}
-  <figure class="image mb-2">
-    <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ side.image_caption }}">
-    <figcaption class="has-text-weight-light has-text-centered">{{ page.imagecaption }}</figcaption>
-  </figure>
-  {% endif %}
+              {{ page.date | date: "%B" }}
+              {% assign d = page.date | date: "%-d"  %}
+              {% case d %}
+              {% when '1' or '21' or '31' %}{{ d }}st,
+              {% when '2' or '22' %}{{ d }}nd,
+              {% when '3' or '23' %}{{ d }}rd,
+              {% else %}{{ d }}th{% endcase %}
+              {{ page.date | date: "%Y" }}
+              &bull;
+              {% if post.layout == post %}
+              {% assign words = content | number_of_words %}
+              {% if words < 180 %}
+              less than 1 min read
+              {% elsif words < 360 %}
+              1 min read
+              {% else %}
+              {{ words | divided_by:180 }} min read
+              {% endif %}
+              {% endif %}
+            </span>
 
-  {{ content }}
-
-  <div>
-    <!-- Left side -->
-    <div class="level-left">
-      <!-- Left side -->
-      {% if page.tags %}
-      <div class="buttons pt-2">
-        <p class="button is-white mb-1">Tags:</p>
-        {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}"
-          class="button has-text-grey is-small is-light">
-          <span class="icon is-small">
-            <i class="fas fa-tag"></i>
-          </span>
-          <span>{{ tag }}</span>
-        </a>
-        {% endfor %}
+          </p>
+        </div>
       </div>
-      {% endif %}
-    </div>
+    </article>
 
-    <!-- Right side -->
-    <div class="level-right">
-      <p class="buttons">
-      <p class="button is-white mb-1">Share on:</p>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&amp;url={{ site.github.url }}{{ page.url }}"
-        class="button is-white">
-        <span class="icon">
-          <i class="fab fa-twitter"></i>
+    {% if page.image %}
+    <figure class="image mb-2">
+      <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ side.image_caption }}">
+      <figcaption class="has-text-weight-light has-text-centered">{{ page.imagecaption }}</figcaption>
+    </figure>
+    {% endif %}
+
+    {{ content }}
+
+    <!-- Left side -->
+    {% if page.tags %}
+    <div class="buttons pt-2" style="vertical-align: middle;">
+      <p class="pr-2 pt-2">Tags:</p>
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}"
+        class="button has-text-grey is-small is-light">
+        <span class="icon is-small">
+          <i class="fas fa-tag"></i>
         </span>
+        <span>{{ tag }}</span>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.github.url }}{{ page.url }}&amp;title={{ page.title }}"
-        class="button is-white">
-        <span class="icon">
-          <i class="fab fa-facebook" aria-hidden="true"></i>
-        </span>
-      </a>
-      <a href="https://plus.google.com/share?url={{ site.github.url }}{{ page.url }}" class="button is-white">
-        <span class="icon">
-          <i class="fab fa-google-plus" aria-hidden="true"></i>
-        </span>
-      </a>
-      </p>
+      {% endfor %}
     </div>
+    {% endif %}
   </div>
 </div>
