@@ -196,7 +196,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 .mobile-sharing {
   display: inline-block !important;
 }
@@ -219,6 +218,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-bar {
   display: none;
+}
+
+.icon-bar a:first-child {
+  margin: 0 auto 5px auto;
 }
 
 .icon-bar a {
