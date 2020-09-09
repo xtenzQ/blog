@@ -6,6 +6,8 @@ $duration: .2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
+$theme-color: #00d1b2;
+
 html {
   scroll-behavior: smooth;
 }
@@ -244,4 +246,14 @@ footer a:hover {
 footer a:hover {
   text-decoration: underline;
   transition: 1s;
+}
+
+.tag-title {
+  padding-left: 10px;
+  border-left: 5px solid #00d1b2;
+}
+
+#content a, #content a:hover{
+  font-weight: 500;
+  color: #000;
 }

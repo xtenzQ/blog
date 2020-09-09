@@ -18,23 +18,16 @@ title: Tags
     {% endfor %}
   </div>
   {% endif %}
-  <div class="tags-expo">
-    <div class="tags-expo-list">
-      {% for tag in site.tags %}
-      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag[0] | slugify }}" class="post-tag"><i class="fas fa-tag"></i>
-        {{ tag[0] }}</a>
-      {% endfor %}
-    </div>
+  <div id="content" class="tags-expo">
     <hr />
     <div class="tags-expo-section">
       {% for tag in site.tags %}
-      <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+      <h3 class="tag-title has-text-weight-light" id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
       <ul class="tags-expo-posts">
         {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
-            {{ post.title }}
-            <small class="post-date">{{ post.date | date_to_string }}</small>
+            <small class="post-date">{{ post.date | date_to_string }}</small> | {{ post.title }}           
           </li>
         </a>
         {% endfor %}
