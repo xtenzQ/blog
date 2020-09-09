@@ -23,7 +23,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00d1b2;
+  background: #D2D7D3;
 }
 
 ::-webkit-scrollbar-track {
@@ -266,4 +266,8 @@ body {
 
 #home {
   flex: 1;
+}
+
+.icon {
+  padding-right: 10px;
 }
