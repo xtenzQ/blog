@@ -1,3 +1,11 @@
+$red: #000;
+$brown: #584E4A;
+$whitey: #f0f0f0;
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,13 +15,6 @@ html {
     scroll-behavior: auto;
   }
 }
-
-/*
-h1, h2, h3, h4, h5, h6 {
-  padding-left: 15px;
-  border-left: 5px #00d1b2 solid;
-}
-*/
 
 ::-webkit-scrollbar {
   width: 9px;
@@ -233,4 +234,14 @@ h1, h2, h3, h4, h5, h6 {
 .sticky {
   position: sticky;
   top: 80px;
+}
+
+footer a,
+footer a:hover {
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  transition: 1s;
 }
