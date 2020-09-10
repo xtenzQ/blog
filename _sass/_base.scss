@@ -203,6 +203,10 @@ html {
   display: inline-block !important;
 }
 
+#feed {
+  margin-top: 2rem;
+}
+
 @media (min-width: 768px) {
   #home {
     margin-left: -71px;
@@ -217,7 +221,13 @@ html {
     display: block !important;
     width: 47px !important;
   }
+
+  #feed {
+    margin-top: 0;
+  }
 }
+
+
 
 .icon-bar {
   display: none;
