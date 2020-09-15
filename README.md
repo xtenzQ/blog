@@ -1,5 +1,5 @@
 # blog
-Jekyll-based blog
+Flat-styled jekyll-based blog
 
 ## Frameworks and Tools
 - Bulma
