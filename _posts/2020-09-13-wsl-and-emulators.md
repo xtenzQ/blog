@@ -13,4 +13,4 @@ Today I have encountered a problem related to running android emulators and Wind
 
 {% include pic.html url="https://i.imgur.com/hgxZhvv.jpg" description="Windows Features" %}
 
-After a couple of tries I figure out that disabling `Virtual Machine Platform` feature helped to solve the problem.
+It's not possible to run WSL and BigNox at the same time, but disabling `Virtual Machine Platform` feature helps to solve the problem.
