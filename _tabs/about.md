@@ -4,25 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Hey! 👋
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-info }
+My name is **Nikita** Rusetskii, I'm a backend developer working for **[KMS Lighthouse](https://kmslh.com/)**. In my spare time
+I'm coding open-source and participate in various hackathons together with my team `dare<dev/>ils`.
 
-```java
-public void step() throws OutputException {
-    String inputLine = inputSystem.input();
-    logger.info("Input command : " + inputLine);
-    Processor processor = new Processor(this);
-    try {
-        processor.process(inputLine);
-    } catch (InvalidCommandException | NoSuchElementException e) {
-        outputSystem.sendError();
-        logger.error(e);
-    } catch (Exception e) {
-        e.printStackTrace();
-        logger.error(e);
-    }
-}
-```
+For more info check my website **[rusetskii.dev](https://rusetskii.dev/)**.
