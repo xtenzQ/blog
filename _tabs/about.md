@@ -11,14 +11,18 @@ I code open-source and participate in various hackathons together with my team `
 
 **Stack:** `java`, `kotlin`, `spring`, `hibernate`, `apache solr`, `mysql`, `docker`
 
-👨‍💻 **Work exp:**
-- KMS Lighthouse <sup>`2022 - present`</sup> • _backend dev_
-- Transneft Technology <sup>`2020 - 2022`</sup> • _java dev_
-- ISPsystem <sup>`2020`</sup> • _2 months intern_
+👨‍💻 **Experience:**
+- KMS Lighthouse <sup>`Jan 2022 - present`</sup> • **Backend Developer**
+- Transneft Technology <sup>`Oct 2020 - Jan 2022`</sup> • **Java Developer**
+- ISPsystem <sup>`Feb - Apr 2020`</sup> • **Backend Developer Intern**
+
+🎓️ **Education:**
+- M.S. in Information Science and Computer Engineering <sup>`2018 - 2020`</sup>
+- B.S. in Information Science and Computer Engineering<sup>`2014 - 2028`</sup>
 
 🏆️ **My recent achievements**:
-- JunctionX Seoul 2021 Finalist (SIA Track) [click](https://xtenzq.github.io/img/junction2021.jpg)
-- IEEE Seoul Student Paper contest bronze award [click](https://xtenzq.github.io/img/IEEE_diploma.png)
-- JunctionX Seoul 2020 Finalist (SIA Track) [click](https://xtenzq.github.io/img/junction2020.jpg)
+- JunctionX Seoul 2021 Finalist (SIA Track) • **[`certificate`](https://xtenzq.github.io/img/junction2021.jpg)**
+- IEEE Seoul Student Paper Contest 2020 bronze award • **[`certificate`](https://xtenzq.github.io/img/IEEE_diploma.png)**
+- JunctionX Seoul 2020 Finalist (SIA Track) • **[`certificate`](https://xtenzq.github.io/img/junction2020.jpg)**
 
 For more info check my website **[rusetskii.dev](https://xtenzq.github.io/)** and my **[CV](https://xtenzq.github.io/cv)**.
