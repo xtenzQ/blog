@@ -18,7 +18,7 @@ I code open-source and participate in various hackathons together with my team `
 
 🎓️ **Education:**
 - M.S. in Information Science and Computer Engineering <sup>`2018 - 2020`</sup>
-- B.S. in Information Science and Computer Engineering<sup>`2014 - 2028`</sup>
+- B.S. in Information Science and Computer Engineering<sup>`2014 - 2018`</sup>
 
 🏆️ **My recent achievements**:
 - JunctionX Seoul 2021 Finalist (SIA Track) • **[`certificate`](https://xtenzq.github.io/img/junction2021.jpg)**
